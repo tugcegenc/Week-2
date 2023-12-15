@@ -48,7 +48,7 @@ public class Main {
         return a % b;
     }
 
-    // Dikdörtgenin alan ve çevresini hesaplama
+    // Dikdörtgenin alan ve çevresini hesaplama.
     static void calc(int a, int b) {
         System.out.println("Çevresi: " + (2 * (a + b)));
         System.out.println("Alanı: " + (a * b));
