@@ -30,3 +30,5 @@ bin/
 Week-2.iml
 .idea
 src
+.gitignore
+PalindromSayi.iml
