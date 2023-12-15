@@ -29,6 +29,4 @@ bin/
 .DS_Store
 Week-2.iml
 .idea
-src
-.gitignore
-PalindromSayi.iml
+
