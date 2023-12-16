@@ -27,7 +27,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-Week-2.iml
+
 *.iml
 .idea
 
