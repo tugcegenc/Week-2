@@ -20,9 +20,9 @@ public class Main {
         int number = input.nextInt();
 
         if (isPrime(number)) {
-            System.out.println(number + " sayısı asaldır.");
+            System.out.println(number + " sayısı asaldır. ");
         } else {
-            System.out.println(number + " sayısı asal değildir.");
+            System.out.println(number + " sayısı asal değildir. ");
         }
     }
 }
