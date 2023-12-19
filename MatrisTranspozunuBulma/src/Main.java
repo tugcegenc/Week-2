@@ -3,19 +3,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // İlk olarak, orijinal matris oluşturuluyor
+
         Scanner input = new Scanner(System.in);
+
         int row;
         int col;
 
+        // Kullanıcıdan satır ve sütun sayıları isteniyor
         System.out.print("Satır sayısı giriniz: ");
         row = input.nextInt();
         System.out.print("Sütun sayısı giriniz: ");
         col = input.nextInt();
 
-
+        // Kullanıcının girdiği satır ve sütun sayılarına göre matris oluşturuluyor
         int[][] matris = new int[row][col];
-
         System.out.println("Matris ");
 
         int value = 1;
