@@ -29,7 +29,6 @@ public class Main {
                 }
             }
 
-            // Eğer bir eleman daha önce incelenmediyse ve tekrar ediyorsa, bilgiyi ekrana yazdırır
             if (count > 0 && isFind(list, list[i], i)) {
                 System.out.println(list[i] + " sayısı " + count + " kere tekrar edildi.");
             }
