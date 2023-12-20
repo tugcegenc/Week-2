@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println(number);
         while (right < 5) {
-            System.out.println("-----------------------");
+            System.out.println("--------------------------");
             System.out.print("Lütfen tahmininizi giriniz : ");
             selected = input.nextInt();
 
