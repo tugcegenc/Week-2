@@ -8,6 +8,7 @@ public class Employee {
     int currentYear;
     double raiseSalary;
 
+    // Employee sınıfının kurucusu
     public Employee(String name, double salary, int workHours, int hireYear) {
         this.name = name;
         this.salary = salary;
@@ -28,43 +29,45 @@ public class Employee {
     }
 
     // Bonus hesaplama metodu
-    void Bonus() {
+    public double Bonus() {
         if (workHours >= 40) {
             double overtimeHours = workHours - 40;
             bonus = overtimeHours * 30;
-
         } else {
-           return;
+            bonus = 0.0;
         }
+        return bonus;
     }
 
-    // Zam hesaplama metodu
-    void raiseSalary() {
+    // Maaş artışı hesaplama metodu
+    public double RaiseSalary() {
         if (currentYear - hireYear < 10) {
-            double raise = salary * 0.05;
-            raiseSalary = raise; // 10 yıldan az çalışanlara %5 zam
+            raiseSalary = salary * 0.05;
+        } else if (currentYear - hireYear >= 10 && currentYear - hireYear < 20) {
+            raiseSalary = salary * 0.10;
+        } else {
+            raiseSalary = salary * 0.15;
         }
-        if (currentYear - hireYear >= 10 && currentYear - hireYear < 20) {
-            double raise = salary * 0.10;
-            raiseSalary = raise; // 10-20 yıl arası çalışanlara %10 zam
-        }
-        if (currentYear - hireYear >= 20) {
-            double raise = salary * 0.15;
-            raiseSalary = raise; // 20 yıldan fazla çalışanlara %15 zam
-        }
+        return raiseSalary;
     }
 
-    // Çalışan bilgilerini yazdırma metodu
+    // Toplam maaş hesaplama metodu
+    public double TotalSalary() {
+        double totalSalary = salary + Bonus() + RaiseSalary() - tax();
+        return totalSalary;
+    }
+
+    // Çalışan bilgilerini string olarak döndüren metot
     public String toString() {
-
-        System.out.println("=====ÇALIŞAN BİLGİLERİ=====");
-
-        return "Adı: " + name +
+        return "=====ÇALIŞAN BİLGİLERİ=====" +
+                "\nAdı: " + name +
                 "\nMaaşı: " + salary +
                 "\nÇalışma Saati: " + workHours +
                 "\nBaşlangıç Yılı: " + hireYear +
                 "\nVergi: " + tax() +
-                "\nBonus: " + bonus +
-                "\nMaaş Artışı: " + raiseSalary;
+                "\nBonus: " + Bonus() +
+                "\nMaaş Artışı: " + RaiseSalary() +
+                "\nVergi ve Bonuslar ile birlikte maaş: " + (TotalSalary() - RaiseSalary()) +
+                "\nToplam Maaş: " + TotalSalary();
     }
 }
