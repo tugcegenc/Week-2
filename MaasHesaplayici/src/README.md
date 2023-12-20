@@ -6,4 +6,4 @@ Bu program, çalışanların maaşlarını hesaplamak için kullanılır. Çalı
 
 Maaş Hesaplama: Program, çalışanın saatlik ücreti ve çalışma saatine göre maaşı hesaplar.
 
-Ek Özellikler: Deneyim yılına bağlı olarak ek maaşlar hesaplanabilir.
+Ek Özellikler: Deneyim yılına bağlı olarak ek maaşlar hesaplanabilir
